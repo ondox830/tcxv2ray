@@ -26,3 +26,62 @@
     }
   ]
 }
+
+
+
+
+
+
+
+{
+		"inbounds": [],
+		"outbounds": [
+				{
+						"mux": {
+								"enabled": false
+						},
+						"protocol": "vless",
+						"settings": {
+								"vnext": [
+										{
+												"address": "rovox.wampipti.net",
+												"port": 443,
+												"users": [
+														{
+																"encryption": "none",
+																"flow": "",
+																"id": "39c0246e-d3c0-438a-819a-43ef8340ca1e",
+																"level": 8
+														}
+												]
+										}
+								]
+						},
+						"streamSettings": {
+								"network": "ws",
+								"security": "tls",
+								"tlsSettings": {
+										"allowInsecure": true,
+										"serverName": "fixedservices.ethiotelecom.et"
+								},
+								"wsSettings": {
+										"headers": {
+												"Host": "rovox.wampipti.net"
+										},
+										"path": "/vless_"
+								}
+						},
+						"tag": "VLESS"
+				}
+		],
+		"policy": {
+				"levels": {
+						"8": {
+								"connIdle": 300,
+								"downlinkOnly": 1,
+								"handshake": 4,
+								"uplinkOnly": 1
+						}
+				}
+		}
+}
